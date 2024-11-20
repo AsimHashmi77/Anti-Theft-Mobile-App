@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deep_green"
+    android:orientation="vertical"
+    tools:context=".Fragment.OtherDevicesInformationFragment">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/vivid_orange"
+        app:title="Other Devices Information"
+        android:paddingStart="16dp"
+        app:titleTextColor="@color/white"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_scrollFlags="scroll|enterAlways" />
+
+    <!-- Content Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Name"
+            android:textStyle="bold"
+            android:textColor="@color/vivid_orange"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_hint" />
+
+        <!-- Input fields for device information -->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDeviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/vivid_orange"
+            android:hint="Device Name"
+            android:textColorHint="@color/white"
+            android:inputType="text"
+            android:layout_marginBottom="16dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Email"
+            android:textStyle="bold"
+            android:textColor="@color/vivid_orange"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_hint" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDeviceEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/vivid_orange"
+            android:hint="Device Email"
+            android:textColorHint="@color/white"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Button to add device -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonAddDevice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="Add Device"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/vivid_orange"
+            android:layout_marginTop="16dp"/>
+
+        <!-- RecyclerView to display added devices -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
